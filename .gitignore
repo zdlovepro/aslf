@@ -1,0 +1,294 @@
+# .gitignore
+
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+.hypothesis/
+coverage.xml
+*.cover
+*.py,cover
+
+# Type check
+.dmypy.json
+dmypy.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =========================
+# Virtual environments
+# =========================
+
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# Environment variables / secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.cer
+
+secrets/
+secret/
+credentials/
+tokens/
+
+# =========================
+# IDE / Editor
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+
+logs/
+*.log
+*.log.*
+log/
+runtime.log
+
+# =========================
+# Database
+# =========================
+
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+postgres_data/
+pgdata/
+mysql_data/
+
+# =========================
+# Alembic / migrations
+# =========================
+# 通常 migrations/versions 应该提交。
+# 如果你希望提交迁移文件，不要忽略 migrations/。
+# 这里只忽略临时迁移缓存。
+
+migrations/__pycache__/
+migrations/**/*.pyc
+
+# =========================
+# Data files
+# =========================
+# 注意：样例数据可以放在 data/sample/ 并提交。
+# 原始行情、处理后行情、真实交易数据不要提交。
+
+data/raw/
+data/processed/
+data/cache/
+data/tmp/
+data/temp/
+data/live/
+data/broker/
+data/private/
+
+!data/sample/
+!data/sample/**
+
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# 允许提交样例数据
+!data/sample/*.csv
+!data/sample/*.xlsx
+!data/sample/*.json
+!data/sample/*.parquet
+
+# =========================
+# Quant / trading sensitive outputs
+# =========================
+
+reports/private/
+reports/live/
+reports/broker/
+reports/account/
+reports/trades/
+reports/orders/
+
+backtest_results/
+optimize_results/
+simulation_results/
+live_results/
+
+broker_logs/
+trade_logs/
+order_logs/
+audit_exports/
+
+# =========================
+# Model / ML artifacts
+# =========================
+
+models/
+checkpoints/
+*.model
+*.joblib
+*.onnx
+*.pt
+*.pth
+*.ckpt
+
+# =========================
+# Cache / temporary
+# =========================
+
+tmp/
+temp/
+.cache/
+cache/
+*.tmp
+*.temp
+
+# =========================
+# FastAPI / server
+# =========================
+
+uvicorn.log
+gunicorn.log
+.pid
+*.pid
+
+# =========================
+# Celery / task queue
+# =========================
+
+celerybeat-schedule
+celerybeat.pid
+worker.pid
+
+# =========================
+# Redis
+# =========================
+
+dump.rdb
+
+# =========================
+# Docker
+# =========================
+
+.docker/
+docker-data/
+docker-compose.override.yml
+
+# =========================
+# Node / frontend optional
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist-frontend/
+frontend/dist/
+frontend/build/
+
+# =========================
+# Documentation build
+# =========================
+
+site/
+docs/_build/
+docs/.vuepress/dist/
+mkdocs_build/
+
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# =========================
+# Keep important empty directories
+# =========================
+
+!.gitkeep
+
+
+AGENTS.md
+
+
